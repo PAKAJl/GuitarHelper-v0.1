@@ -1,0 +1,49 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, pngextra, jpeg, ExtCtrls;
+
+type
+  TMenuForm = class(TForm)
+    Image1: TImage;
+    PNGButton1: TPNGButton;
+    PNGButton2: TPNGButton;
+    PNGButton3: TPNGButton;
+    procedure PNGButton1Click(Sender: TObject);
+    procedure PNGButton2Click(Sender: TObject);
+    procedure PNGButton3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MenuForm: TMenuForm;
+
+implementation
+
+uses Unitqwd21wdq;
+
+{$R *.dfm}
+
+procedure TMenuForm.PNGButton1Click(Sender: TObject);
+begin
+  MenuForm.Close;
+end;
+
+procedure TMenuForm.PNGButton2Click(Sender: TObject);
+begin
+  application.Minimize;
+end;
+
+procedure TMenuForm.PNGButton3Click(Sender: TObject);
+begin
+  form1.hide;
+  form2.show;
+end;
+
+end.

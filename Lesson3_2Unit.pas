@@ -1,0 +1,51 @@
+unit Lesson3_2Unit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, pngimage, ExtCtrls, pngextra;
+
+type
+  TLesson3_2 = class(TForm)
+    BackGround: TImage;
+    Label1: TLabel;
+    Image1: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    PNGButton1: TPNGButton;
+    PNGButton2: TPNGButton;
+    procedure PNGButton2Click(Sender: TObject);
+    procedure PNGButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Lesson3_2: TLesson3_2;
+
+implementation
+
+uses Test3Unit, Lesson3_1Unit;
+
+{$R *.dfm}
+
+procedure TLesson3_2.PNGButton2Click(Sender: TObject);
+begin
+  Lesson3_2.Close;
+  Lesson3_1.show;
+end;
+
+procedure TLesson3_2.PNGButton1Click(Sender: TObject);
+begin
+  Lesson3_2.Close;
+Test3.show;
+end;
+
+end.
